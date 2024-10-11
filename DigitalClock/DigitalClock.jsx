@@ -13,7 +13,7 @@ const DigitalClock = () => {
     }
 },[]);
 
-  function formatTime(){
+  const formatTime = () => {
     let hours = time.getHours();
     const minutes = time.getMinutes();
     const seconds = time.getSeconds();
@@ -24,7 +24,7 @@ const DigitalClock = () => {
     return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)} ${padZero(meridium)}`   
   }
 
-  function padZero(number){
+  const padZero = (number) => {
     return (number > 10 ? "0" : "") + number
   }
   
